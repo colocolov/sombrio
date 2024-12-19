@@ -1,0 +1,104 @@
+.about
+  --height: 820px
+  padding-top: var(--sectionPaddingTop)
+  padding-bottom: var(--sectionPaddingBottom)
+  &__container
+    display: flex
+    gap: 40px
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    flex: 1
+
+  &__head
+    min-width: 268px
+    margin-bottom: 20px
+
+  &__btn
+    background-color: #a94a20
+    border: 2px solid #a94a20
+    color: $grey
+    @media (any-hover: hover)
+      &:hover
+        color: #a94a20
+
+  &__play
+    margin: auto
+  &__button
+    cursor: pointer
+    font-weight: 400
+    font-size: 11px
+    color: $graphite
+    text-transform: uppercase
+    position: relative
+    background-color: $white
+    padding: 4px
+    transition: color 0.3s ease-in
+    &::before
+      content: ''
+      position: absolute
+      top: -100%
+      left: 40%
+      width: 65px
+      height: 65px
+      // width: 2px
+      border-radius: 50%
+      border: 2px solid $graphite
+      z-index: -1
+      // background-color: $graphite
+      transition: all 0.3s ease-in
+    &::after
+      content: ''
+      position: absolute
+      opacity: 0
+      top: 0
+      right: -18px
+      width: 20px
+      height: 20px
+      // background: url("../images/icons/sprite.svg#viber") center / cover no-repeat
+      background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.409 9.35306C21.8893 9.60847 22.291 9.98975 22.5712 10.456C22.8514 10.9223 22.9994 11.4561 22.9994 12.0001C22.9994 12.544 22.8514 13.0778 22.5712 13.5441C22.291 14.0104 21.8893 14.3917 21.409 14.6471L8.597 21.6141C6.534 22.7371 4 21.2771 4 18.9681V5.03306C4 2.72306 6.534 1.26406 8.597 2.38506L21.409 9.35306Z' fill='black'/%3E%3C/svg%3E%0A") center / cover no-repeat
+      // fill: $graphite
+      z-index: 5
+      transition: opacity 0.2s ease 0.3s
+    @media (any-hover: hover)
+      &:hover
+        color: $gold
+        &::before
+          width: 75px
+          height: 75px
+          top: -130%
+          left: 65%
+        &::after
+          opacity: 1
+          // right: -18px
+
+  &__nav
+    margin-top: auto
+    display: flex
+    gap: 12px
+    width: 100%
+  &__link
+    flex: 1
+
+
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    z-index: 1
+  &__clip
+    position: relative
+    width: 893px
+    height: var(--height)
+  &__video
+    z-index: 2
+  &__movie
+    display: none
+
+
+
+

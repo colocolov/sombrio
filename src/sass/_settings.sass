@@ -126,6 +126,23 @@ input
 
 .heading
   @extend %head
+  text-transform: uppercase
+  max-width: 365px
+  &__word
+    display: flex
+    align-items: center
+    // justify-content: center
+    &:first-child
+      font-weight: bold
+  &__line
+    flex: 1
+    height: 2px
+    background-color: $graphite
+  &__text
+    margin: 0 10px
+    white-space: nowrap
+
+
 
 .unvisible
   position: absolute

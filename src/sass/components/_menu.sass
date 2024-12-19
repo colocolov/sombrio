@@ -60,15 +60,17 @@
 
     // submenu TEST
     & li a
-      padding: 20px
+      // padding: 20px
       display: flex
       justify-content: space-between
       transition: background-color 0.3s ease
+      color: $graphite
+      transition: color 0.3s ease-in
       @media (any-hover: hover)
       &:hover
-        background-color: lighten($graphite, 3)
-        &:last-child a
-          color: $white
+        // background-color: lighten($graphite, 3)
+        // &:last-child a
+        color: $gold
       @include mediaNotebook
         padding: 15px 10px
         margin-bottom: 7px
@@ -119,7 +121,7 @@
     flex-wrap: wrap
     @include font(600, 16, 20)
     color: $graphite // ---------- ЦВЕТ ССЫЛОК НА ДЕСКТОПЕ
-    text-transform: uppercase
+    // text-transform: uppercase
     transition: color 0.3s ease
     &:not(:last-child)
       margin-right: 39px
@@ -131,14 +133,14 @@
       bottom: -6px
       width: 0%
       height: 2px
-      background-color: $white
+      background-color: $graphite
       transition: width 0.5s ease
     @media (any-hover: hover)
       &:hover
         &::before
           width: 100%
         &:last-child a
-          color: $white
+          color: $graphite
 
     // уточнить!!!
     // &:last-child a
