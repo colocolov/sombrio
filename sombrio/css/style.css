@@ -739,6 +739,16 @@ input {
 .btn-error {
   margin-top: 20px;
 }
+.btn-call {
+  background-color: #a94a20;
+  border: 2px solid #a94a20;
+  color: #F2F2F2;
+}
+@media (any-hover: hover) {
+  .btn-call:hover {
+    color: #a94a20;
+  }
+}
 
 .navigation {
   display: flex;
@@ -837,16 +847,6 @@ input {
   min-width: 268px;
   margin-bottom: 20px;
 }
-.about__btn {
-  background-color: #a94a20;
-  border: 2px solid #a94a20;
-  color: #F2F2F2;
-}
-@media (any-hover: hover) {
-  .about__btn:hover {
-    color: #a94a20;
-  }
-}
 .about__play {
   margin: auto;
 }
@@ -927,6 +927,97 @@ input {
 }
 .about__movie {
   display: none;
+}
+
+.advantage {
+  padding-top: var(--sectionPaddingTop);
+  padding-bottom: var(--sectionPaddingBottom);
+}
+.advantage__container {
+  display: flex;
+  gap: 40px;
+}
+.advantage__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+.advantage__head {
+  margin-bottom: 20px;
+}
+.advantage__head span {
+  font-weight: bold;
+  color: #94796D;
+}
+.advantage__number {
+  margin-top: auto;
+  font-size: 24px;
+}
+.advantage__number span {
+  font-weight: bold;
+  font-weight: 600;
+  font-size: 80px;
+  opacity: 0;
+}
+.advantage__number.in-view span {
+  opacity: 1;
+}
+.advantage__wrap {
+  width: 893px;
+}
+.advantage__list {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.advantage__item {
+  padding: 10px;
+  width: 100%;
+  background-color: #F2F2F2;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.advantage__item.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+.advantage__name {
+  padding: 30px;
+  width: 255px;
+  border-right: 2px solid #5D616C;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.advantage__descr {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
+}
+.advantage__text {
+  width: 328px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.advantage__text span {
+  font-weight: bold;
+}
+.advantage__divs {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 40px;
+}
+.advantage__divs span {
+  background-color: #5D616C;
+  height: 2px;
 }
 
 .footer {

@@ -4,6 +4,7 @@ import vars from "./_vars.js";
 // мои модули
 import "./modules/nav.js";
 import "./modules/aboutVideo.js";
+import "./modules/animation.js";
 //import "./modules/dinam-adap.js";
 //import "./modules/main-slider.js";
 
