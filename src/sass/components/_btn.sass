@@ -11,7 +11,7 @@
   background: $graphite
   // border-radius: 20px
   border: 2px solid $graphite
-  padding: 20px 30px
+  padding: 15px 30px
   color: $grey
   @include font(600, 16, 16)
   letter-spacing: 0.15em
@@ -47,23 +47,29 @@
 .navigation
   display: flex
   align-items: center
+  z-index: 2
   &__btn
     width: 50px
     height: 50px
     cursor: pointer
-    transition: transform 0.5s ease-in-out
+    transition: border-color 0.3s ease
+    border: 1px solid $gold
+    border-radius: 50%
     &-prev
       transform: rotate(180deg)
       // transform: rotate(90deg)
       @media (any-hover: hover)
         &:hover
-          transform: translateX(-5px) rotate(180deg)
+          border-color: $graphite
     &-svg
       width: 100%
       height: 100%
+      fill: $gold
+      transition: transform 0.3s ease-in
     &-next
       @media (any-hover: hover)
         &:hover
-          transform: translateX(5px)
+          border-color: $graphite
+
     &:focus
       outline: none

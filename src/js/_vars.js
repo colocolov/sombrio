@@ -1,3 +1,4 @@
 export default {
-  heroSliderEl: document.querySelector(".hero__slider"),
+  stockSliderEl: document.querySelector(".stock__slider"),
+  // stockSliderNestedEl: document.querySelector(".stock__nested-slider"),
 };

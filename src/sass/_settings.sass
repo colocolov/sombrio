@@ -128,19 +128,48 @@ input
   @extend %head
   text-transform: uppercase
   max-width: 365px
+  // anim
+  overflow: hidden
   &__word
     display: flex
     align-items: center
     // justify-content: center
+    // anim
+    overflow: hidden
     &:first-child
       font-weight: bold
   &__line
     flex: 1
     height: 2px
     background-color: $graphite
+    // anim
+    opacity: 0
+    transition: opacity 1s ease 0.5s
   &__text
     margin: 0 10px
     white-space: nowrap
+    // anim
+    transform: translateX(-100%)
+    opacity: 0
+    transition: transform 1s, opacity 1s
+    // animation: slide-in 1s forwards
+  &:nth-child(2) .heading__text
+    transform: translateX(100%)
+    // animation: slide-in-reverse 1s forwards
+  &.animate .heading__text
+    transform: translateX(0)
+    opacity: 1
+  &.animate .heading__line
+    opacity: 1
+
+@keyframes slide-in
+  to
+    transform: translateX(0)
+@keyframes slide-in-reverse
+  to
+    transform: translateX(0)
+
+
 
 
 

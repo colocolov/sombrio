@@ -9,10 +9,10 @@ Swiper.use([Pagination, Navigation]);
 const gap = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--gap"));
 console.log(gap);
 
-if (_vars.heroSliderEl) {
+if (_vars.stockSliderEl) {
 
   // слайдер на главной
-  new Swiper(_vars.heroSliderEl, {
+  new Swiper(_vars.stockSliderEl, {
     // loop: true,
     autoplay: {
       //пауза между прокруткой
