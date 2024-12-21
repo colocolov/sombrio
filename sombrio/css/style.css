@@ -2038,6 +2038,54 @@ input {
   background-color: #94796D;
 }
 
+.certificates {
+  padding-top: var(--sectionPaddingTop);
+  padding-bottom: var(--sectionPaddingBottom);
+}
+.certificates__head {
+  margin-bottom: 20px;
+}
+.certificates__btn {
+  margin-bottom: 68px;
+}
+.certificates__slider {
+  height: 602px;
+}
+.certificates__navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.certificates__navigation svg {
+  width: 60px;
+}
+.certificates__slide {
+  width: 376px;
+  padding: 35px;
+}
+.certificates__img {
+  padding-bottom: 532px;
+}
+
+.certificates--prev {
+  height: 73px;
+  width: 73px;
+  border-width: 2px;
+}
+
+.certificates--next {
+  width: 73px;
+  height: 73px;
+  border-width: 2px;
+}
+
 .footer {
   background-color: #5D616C;
   padding: 60px 0;
