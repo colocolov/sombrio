@@ -22,19 +22,33 @@
     text-transform: uppercase
     text-align: center
     & .swiper-pagination-bullet
-      padding: 15px
+      border: 2px solid $graphite
+      padding: 12px
       background-color: $graphite
       flex: 1 1 47%
       opacity: 1
       border-radius: 0
       height: auto
+      transition: background-color 0.3s ease-in, color 0.3s ease
+      @media (any-hover: hover)
+        &:hover
+          background-color: transparent
+          color: $graphite
+          border-radius: 3px
     & .swiper-pagination-bullet-active
+      border: 2px solid $gold
       background-color: $gold
+      @media (any-hover: hover)
+        &:hover
+          color: $gold
   &__quantity
     margin-top: auto
     @include font(500, 24, 32)
     span
       @include font(700, 80, 105)
+    &-plus
+      @include font(700, 80, 105)
+      display: inline-block
   &__wrap
     flex-basis: 50%
     width: 660px
