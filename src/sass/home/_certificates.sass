@@ -7,8 +7,11 @@
     margin-bottom: 20px
   &__btn
     margin-bottom: 68px
+  &__wrap
+    position: relative
   &__slider
-    height: 602px
+    height: 532px
+    width: 846px
   &__navigation
     position: absolute
     top: 50%
@@ -20,12 +23,14 @@
     justify-content: space-between
     align-items: center
     z-index: 2
+    transform: translateY(-50%)
     svg
       width: 60px
+      transform: translateX(30px)
   &__slider-wrap
   &__slide
     width: 376px
-    padding: 35px
+    // padding: 1px
   &__img
     padding-bottom: 532px
 
@@ -33,7 +38,9 @@
   height: 73px
   width: 73px
   border-width: 2px
+  transform: rotate(0deg)
 .certificates--next
   width: 73px
   height: 73px
   border-width: 2px
+  transform: rotate(180deg)

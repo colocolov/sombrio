@@ -2048,8 +2048,12 @@ input {
 .certificates__btn {
   margin-bottom: 68px;
 }
+.certificates__wrap {
+  position: relative;
+}
 .certificates__slider {
-  height: 602px;
+  height: 532px;
+  width: 846px;
 }
 .certificates__navigation {
   position: absolute;
@@ -2062,13 +2066,14 @@ input {
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+  transform: translateY(-50%);
 }
 .certificates__navigation svg {
   width: 60px;
+  transform: translateX(30px);
 }
 .certificates__slide {
   width: 376px;
-  padding: 35px;
 }
 .certificates__img {
   padding-bottom: 532px;
@@ -2078,12 +2083,14 @@ input {
   height: 73px;
   width: 73px;
   border-width: 2px;
+  transform: rotate(0deg);
 }
 
 .certificates--next {
   width: 73px;
   height: 73px;
   border-width: 2px;
+  transform: rotate(180deg);
 }
 
 .footer {
