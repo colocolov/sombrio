@@ -10,6 +10,7 @@ import "./modules/animateNumber.js";
 import "./modules/certificates.js";
 //import "./modules/dinam-adap.js";
 import "./modules/stockSlider.js";
+import "./modules/modal.js";
 
 //import * as navMenu from "./modules/accordeon.js";
 //import * as navMenu from "./modules/revies.js";
