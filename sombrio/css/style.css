@@ -890,9 +890,30 @@ a:hover {
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "BertSans";
+  src: url("../fonts/BertSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BertSans";
+  src: url("../fonts/BertSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BertSans";
+  src: url("../fonts/BertSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BertSans";
+  src: url("../fonts/BertSans-Black.woff2") format("woff2");
+  font-weight: 900;
   font-display: swap;
   font-style: normal;
 }
@@ -903,7 +924,7 @@ a:hover {
 }
 
 .page__body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "BertSans", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
@@ -912,7 +933,7 @@ a:hover {
 }
 
 .heading {
-  font-family: "Montserrat", sans-serif;
+  font-family: "BertSans", sans-serif;
   font-weight: 500;
   font-size: 40px;
   line-height: 0.95;
@@ -1070,7 +1091,7 @@ input {
 
 .heading {
   text-transform: uppercase;
-  max-width: 365px;
+  max-width: 390px;
   overflow: hidden;
 }
 .heading__word {
