@@ -36,13 +36,13 @@ if (_vars.certificatesSliderEl) {
     slidesPerView: 2,
     // расстояние между слайдами
     // spaceBetween: gap, // свой размер
-    spaceBetween: 95,
+    spaceBetween: 94,
     // кол-во пролистываемых слайдов
-    slidesPerGroup: 2,
+    slidesPerGroup: 1,
     // стартовый слайд
     initialSlide: 0,
     // активный слайд по центру
-    centeredSlides: true,
+    centeredSlides: false,
     
     // адаптив
     // breakpoints: {
