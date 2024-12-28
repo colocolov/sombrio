@@ -1,15 +1,17 @@
 // Получаем элементы
-const openModalBtn = document.getElementById('openModalBtn');
+const openModalBtns = document.querySelectorAll('.openModalBtn');
 const modal = document.getElementById('modal');
 const closeModal = document.getElementById('closeModal');
 const submitBtn = document.getElementById('submit');
 const body = document.body;
 
 // Открытие модального окна при клике на кнопку
-openModalBtn.onclick = function() {
-  modal.style.display = "block";
-  body.classList.add("_lock");
-};
+openModalBtns.forEach(button => {
+  button.onclick = function() {
+    modal.style.display = "block";
+    body.classList.add('_lock'); // Добавляем класс _lock к body
+  };
+});
 
 // Закрытие модального окна при клике на крестик
 closeModal.onclick = function() {

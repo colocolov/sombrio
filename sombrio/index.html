@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta name="theme-color" content="#111111">
   <!-- подключение стилей -->
-  <link rel="stylesheet" href="css/style.min.css?ver=1.0.0">
+  <link rel="stylesheet" href="css/style.min.css?ver=1.0.10">
   <!-- подключение скриптов -->
-  <script defer src="js/main.min.js?ver=1.0.0"></script>
+  <script defer src="js/main.min.js?ver=1.0.7"></script>
   <!-- подключение favicon -->
   <!-- <link rel="icon" href="images/favicon/favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -88,15 +88,17 @@
       <section class="top">
   <div class="top__wrapper">
 
-
     <div class="top__clip _vbg">
-      <video src="resources/video/main_video.mp4" playsinline muted autoplay loop class="top__video"></video>
+      <video autoplay muted loop class="top__video" playsinline>
+        <source src="resources/video/main_video.mp4" type="video/mp4">
+        <source src="resources/video/main_video.webm" type="video/webm">
+        <source src="resources/video/main_video.ogv" type="video/ogv">
+        Ваш браузер не поддерживает видео.
+      </video>
     </div>
     <div class="top__container">
       <h1 class="top__head">Жалюзи, для уюта в вашем доме</h1>
-
     </div>
-
 
   </div><!-- /.top__container -->
 </section><!-- /.top -->
@@ -114,7 +116,7 @@
           <div class="heading__text">легкость</div>
         </div>
       </h2>
-      <a href="#" class="btn-reset btn btn-call about__btn">Связаться</a>
+      <button class="btn-reset btn btn-call about__btn openModalBtn">Связаться</button>
 
       <div class="about__play">
         <button id="playPauseButton" class="about__button">Watch video</button>
@@ -144,7 +146,7 @@
       <h2 class="heading advantage__head">
         Опыт более <span>20 лет</span> мы знаем, как создавать комфорт
       </h2>
-      <a href="#" class="btn-reset btn btn-call advantage__btn">Связаться</a>
+      <button class="btn-reset btn btn-call advantage__btn openModalBtn">Связаться</button>
       <div class="advantage__number">
         <span>5</span>
         преимуществ
@@ -223,7 +225,7 @@
       <div class="photos__img _ibg">
         <img src="images/works/04.jpg" loading="lazy" width="677" height="460" alt="">
       </div>
-      <a href="#" class="btn-reset btn btn-call photos__btn">Связаться</a>
+      <button class="btn-reset btn btn-call photos__btn openModalBtn">Связаться</button>
       <div class="photos__img _ibg">
         <img src="images/works/05.jpg" loading="lazy" width="1360" height="650" alt="">
       </div>
@@ -245,7 +247,7 @@
           <div class="heading__text">выбор</div>
         </div>
       </h2>
-      <a href="#" class="btn-reset btn btn-call stock__btn">Связаться</a>
+      <button class="btn-reset btn btn-call stock__btn openModalBtn">Связаться</button>
 
       <div class="stock__bullet"></div>
 
@@ -458,7 +460,7 @@
           <div class="heading__text">качество</div>
         </div>
       </h2>
-      <button id="openModalBtn" class="btn-reset btn btn-call certificates__btn">Связаться</button>
+      <button class="btn-reset btn btn-call certificates__btn openModalBtn">Связаться</button>
     </div>
 
     <div class="certificates__wrap">
