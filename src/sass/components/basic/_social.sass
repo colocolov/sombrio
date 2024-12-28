@@ -6,6 +6,16 @@
       margin-right: 22px
   svg
     fill: $graphite
+    &.instagram
+      fill: transparent
+      stroke: $graphite
+      stroke-width: 2px
+      padding: 1px
+      transition: stroke 0.3s ease-in
+      @media (any-hover: hover)
+        &:hover
+          fill: none
+          stroke: $gold
     @media (any-hover: hover)
       &:hover
         fill: $gold

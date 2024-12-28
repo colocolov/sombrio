@@ -14,7 +14,7 @@ export const path = {
     html: `${buildFolder}/`,
     images: `${buildFolder}/images/`,
     fonts: `${buildFolder}/fonts/`,
-    files: `${buildFolder}/files/`,
+    files: `${buildFolder}/resources/`,
     favicon: `${buildFolder}/images/favicon/`,
   },
   done: {
@@ -26,7 +26,7 @@ export const path = {
     html: `${srcFolder}/*.html`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/images/icons/*.svg`,
-    files: `${srcFolder}/files/**/*.*`,
+    files: `${srcFolder}/resources/**/*.*`,
     favicon: `${srcFolder}/images/favicon/favicon.svg`,
   },
   watch: {
@@ -34,9 +34,13 @@ export const path = {
     js: `${srcFolder}/js/**/*.js`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
-    files: `${srcFolder}/files/**/*.*`,
+    files: `${srcFolder}/resources/**/*.*`,
   },
-  clean: buildFolder,
+  clean: [
+    `${buildFolder}/css/`,
+    `${buildFolder}/js/`,
+    `${buildFolder}/images/`,
+  ],
   buildFolder: buildFolder,
   srcFolder: srcFolder,
   rootFolder: rootFolder,

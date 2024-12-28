@@ -910,13 +910,6 @@ a:hover {
   font-display: swap;
   font-style: normal;
 }
-@font-face {
-  font-family: "BertSans";
-  src: url("../fonts/BertSans-Black.woff2") format("woff2");
-  font-weight: 900;
-  font-display: swap;
-  font-style: normal;
-}
 :root {
   --widthscrollbar: 17px;
   --sectionPaddingTop: 70px;
@@ -1043,6 +1036,7 @@ input {
 
 ._ibg {
   position: relative;
+  overflow: hidden;
 }
 ._ibg img {
   position: absolute;
@@ -1051,6 +1045,7 @@ input {
   top: 0;
   left: 0;
   object-fit: cover;
+  transition: transform 1s ease-in;
 }
 
 ._vbg {
@@ -1100,7 +1095,7 @@ input {
   overflow: hidden;
 }
 .heading__word:first-child {
-  font-weight: bold;
+  font-weight: 700;
 }
 .heading__line {
   flex: 1;
@@ -1353,7 +1348,7 @@ input {
 @media screen and (max-width: 767.98px) {
   .menu__item {
     margin-bottom: 40px;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 32px;
     color: #5D616C;
   }
@@ -1563,6 +1558,19 @@ input {
 .social svg {
   fill: #5D616C;
 }
+.social svg.instagram {
+  fill: transparent;
+  stroke: #5D616C;
+  stroke-width: 2px;
+  padding: 1px;
+  transition: stroke 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .social svg.instagram:hover {
+    fill: none;
+    stroke: #94796D;
+  }
+}
 @media (any-hover: hover) {
   .social svg:hover {
     fill: #94796D;
@@ -1590,6 +1598,7 @@ input {
   text-align: center;
   text-transform: uppercase;
   transition: background 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease, border-radius 0.3s ease;
+  position: relative;
 }
 .btn:focus {
   outline: none;
@@ -1643,7 +1652,7 @@ input {
   width: 100%;
   height: 100%;
   fill: #94796D;
-  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, fill 0.3s ease;
 }
 @media (any-hover: hover) {
   .navigation__btn-next:hover {
@@ -1725,7 +1734,7 @@ input {
 }
 .about__button {
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 11px;
   color: #5D616C;
   text-transform: uppercase;
@@ -1789,11 +1798,16 @@ input {
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  transition: transform 1s ease-in;
 }
 .about__clip {
   position: relative;
   width: 893px;
   height: var(--height);
+  overflow: hidden;
+}
+.about__clip:hover img {
+  transform: scale(1.03);
 }
 .about__video {
   z-index: 2;
@@ -1820,7 +1834,7 @@ input {
   margin-bottom: 20px;
 }
 .advantage__head span {
-  font-weight: bold;
+  font-weight: 700;
   color: #94796D;
 }
 .advantage__number {
@@ -1828,8 +1842,7 @@ input {
   font-size: 24px;
 }
 .advantage__number span {
-  font-weight: bold;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 80px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -1863,7 +1876,7 @@ input {
   padding: 30px;
   width: 255px;
   border-right: 2px solid #5D616C;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 }
 .advantage__descr {
@@ -1881,7 +1894,7 @@ input {
   text-transform: uppercase;
 }
 .advantage__text span {
-  font-weight: bold;
+  font-weight: 700;
 }
 .advantage__divs {
   display: flex;
@@ -1911,6 +1924,9 @@ input {
 .photos__img:last-child {
   padding-bottom: 650px;
 }
+.photos__img:hover img {
+  transform: scale(1.03);
+}
 .photos__btn {
   width: 100%;
 }
@@ -1934,6 +1950,8 @@ input {
   margin-bottom: 20px;
 }
 .stock__bullet {
+  position: relative;
+  z-index: 3;
   margin: auto 0;
   display: flex;
   flex-wrap: wrap;
@@ -2093,6 +2111,12 @@ input {
   width: 60px;
   transform: translateX(30px);
 }
+@media (any-hover: hover) {
+  .certificates__navigation svg:hover {
+    transform: translateX(20px);
+    fill: #5D616C;
+  }
+}
 .certificates__slide {
   width: 376px;
 }
@@ -2118,6 +2142,26 @@ input {
   background-color: #5D616C;
   padding: 60px 0;
   color: #FFFFFF;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer__contacts-top, .footer__contacts-schedule {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer__contacts-list {
+  grid-column: 3/4;
+}
+.footer__head .heading__line {
+  background-color: #FFFFFF;
 }
 .footer__item {
   transition: color 0.3s ease;

@@ -1,8 +1,16 @@
 import svgSprit from "gulp-svg-sprite";
 import svgO from "gulp-svgo";
+import del from "del";
+
+// export const cleanSprites = () => {
+//   return del(`${app.path.build.images}/icons/sprite.svg`);
+// };
 
 export const svgSprite = () => {
-  return app.gulp
+  // del.sync(app.path.build.images);
+  return del(global.app.path.build.images + 'sprite.svg')
+  .then(() => {
+      return app.gulp
     .src(app.path.src.svg)
     .pipe(
       app.plugins.plumber(
@@ -11,7 +19,7 @@ export const svgSprite = () => {
           message: "Error: <%= error.message %>",
         })
       )
-  )
+    )
     .pipe(svgO({
       plugins: [{
         removeAttrs: { attrs: "(fill|stroke|style|width|height|data.*)" }
@@ -30,4 +38,8 @@ export const svgSprite = () => {
     )
     .pipe(app.gulp.dest(app.path.build.images));
   //.pipe(app.plugins.browserSync.stream())
+  });
 };
+
+// Последовательная задача для удаления старой папки и создания нового спрайта
+// export const svgSprite = app.gulp.series(cleanSprites, generateSvgSprite);

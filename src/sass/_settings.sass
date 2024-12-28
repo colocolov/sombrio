@@ -84,6 +84,7 @@ input
 
 ._ibg
   position: relative
+  overflow: hidden
   img
     position: absolute
     width: 100%
@@ -91,6 +92,7 @@ input
     top: 0
     left: 0
     object-fit: cover
+    transition: transform 1.0s ease-in
 
 ._vbg
   position: absolute
@@ -137,7 +139,7 @@ input
     // anim
     overflow: hidden
     &:first-child
-      font-weight: bold
+      font-weight: 700
   &__line
     flex: 1
     height: 2px

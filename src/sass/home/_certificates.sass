@@ -27,6 +27,10 @@
     svg
       width: 60px
       transform: translateX(30px)
+      @media (any-hover: hover)
+        &:hover
+          transform: translateX(20px)
+          fill: $graphite
   &__slider-wrap
   &__slide
     width: 376px
