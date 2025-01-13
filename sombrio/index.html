@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta name="theme-color" content="#111111">
   <!-- подключение стилей -->
-  <link rel="stylesheet" href="css/style.min.css?ver=12301617">
+  <link rel="stylesheet" href="css/style.min.css?ver=01112237">
   <!-- подключение скриптов -->
-  <script defer src="js/main.min.js"></script>
+  <script defer src="js/main.min.js?ver=01112237"></script>
   <!-- подключение favicon -->
   <!-- <link rel="icon" href="images/favicon/favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -20,7 +20,9 @@
   <div class="wrapper">
     <header class="header">
   <div class="header__container">
-    <div class="header__logo logo">SUN EXPERT</div>
+    <div class="header__logo logo">
+      <img src="images/logo.svg" width="75" height="55" alt="Logo">
+    </div>
 
     <div class="header__menu menu">
       <nav class="menu__body" title="Main navigation">
@@ -38,7 +40,38 @@
       </button>
     </div><!-- /.menu -->
 
-    <!-- <ul class="menu-languages menu__list" data-da=".menu__body,767.98,1">
+    <ul class="top__social social">
+      <li class="social__item">
+        <a href="#" class="social__icon" target="_blank">
+          <svg class="icon-svg instagram" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#instagram3"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__icon" target="_blank">
+          <svg class="icon-svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#whatsapp"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__icon" target="_blank">
+          <svg class="icon-svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#viber"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__icon" target="_blank">
+          <svg class="icon-svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="menu-languages menu__list" data-da=".menu__body,767.98,1">
       <li class="menu-item-language wpml-ls-item wpml-ls-current-language menu__item">
         <a href="#" class="menu__link">Ru</a>
         <ul class="sub-menu2 language-dropdow2n">
@@ -46,39 +79,8 @@
           <li class="menu-item-language2 wpml-ls-item2"><a href="#">En</a></li>
         </ul>
       </li>
-    </ul> -->
-    <!-- /.languages -->
-
-    <ul class="top__social social">
-      <li class="social__item">
-        <a href="#" class="social__icon">
-          <svg class="icon-svg instagram" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
-            <use xlink:href="images/icons/sprite.svg#instagram3"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a href="#" class="social__icon">
-          <svg class="icon-svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
-            <use xlink:href="images/icons/sprite.svg#whatsapp"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a href="#" class="social__icon">
-          <svg class="icon-svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
-            <use xlink:href="images/icons/sprite.svg#viber"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social__item">
-        <a href="#" class="social__icon">
-          <svg class="icon-svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
-            <use xlink:href="images/icons/sprite.svg#telegram"></use>
-          </svg>
-        </a>
-      </li>
     </ul>
+    <!-- /.languages
 
   </div><!-- /.container -->
 </header><!-- /.header -->
@@ -531,12 +533,24 @@
 
       </div>
       <div class="footer__contacts-schedule">
-        <ul class="footer__contacts-list">
-          <li class="footer__contacts-item">1</li>
-          <li class="footer__contacts-item">2</li>
-          <li class="footer__contacts-item">3</li>
-          <li class="footer__contacts-item">4</li>
-        </ul>
+        <dl class="footer__contacts-list">
+          <div class="footer__contacts-wrap">
+            <dt class="footer__contacts-name">офис</dt>
+            <dd class="footer__contacts-mean">str. uzinilor 4/2</dd>
+          </div>
+          <div class="footer__contacts-wrap">
+            <dt class="footer__contacts-name">понедельник-пятница</dt>
+            <dd class="footer__contacts-mean">9:00-17:00</dd>
+          </div>
+          <div class="footer__contacts-wrap">
+            <dt class="footer__contacts-name">суббота</dt>
+            <dd class="footer__contacts-mean">9:00-14:00</dd>
+          </div>
+          <div class="footer__contacts-wrap">
+            <dt class="footer__contacts-name">воскресенье</dt>
+            <dd class="footer__contacts-mean">выходной</dd>
+          </div>
+        </dl>
       </div>
     </div>
     <!-- /.footer__contacts -->
@@ -575,13 +589,48 @@
 </footer><!-- /.footer -->
     <!-- Модальное окно -->
 <div id="modal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
+  <div class="modal__content">
+    <span id="closeModal" class="modal__close">&times;</span>
 
+    <div class="modal__suptitle">SUN EXPERT</div>
     <h3 class="modal__head">ЖАЛЮЗИ, ДЛЯ УЮТА В ВАШЕМ ДОМЕ</h3>
-    <div>Введите ваш номер телефона</div>
-    <input type="tel" id="phone" placeholder="Ваш номер телефона">
-    <button id="submit">Отправить</button>
+    <div class="modal__text">
+      Оставьте свой номер телефона.<br>
+      Дату замера согласуете с менеджером.<br>
+      <span>Перезвоним через 5 минут!</span>
+    </div>
+    <input class="modal__input" type="tel" id="phone" placeholder="+373">
+    <button class="btn-reset btn btn-call modal__btn" id="submit">Отправить</button>
+    <ul class="modal__social social">
+      <li class="social__item">
+        <a href="#" class="social__icon">
+          <svg class="icon-svg instagram" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__icon">
+          <svg class="icon-svg viber" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#viber"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__icon">
+          <svg class="icon-svg whatsapp" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#whatsapp"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__icon">
+          <svg class="icon-svg telegram" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
   </div><!-- /.wrapper -->

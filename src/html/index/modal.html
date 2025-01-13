@@ -1,11 +1,46 @@
 <!-- Модальное окно -->
 <div id="modal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
+  <div class="modal__content">
+    <span id="closeModal" class="modal__close">&times;</span>
 
+    <div class="modal__suptitle">SUN EXPERT</div>
     <h3 class="modal__head">ЖАЛЮЗИ, ДЛЯ УЮТА В ВАШЕМ ДОМЕ</h3>
-    <div>Введите ваш номер телефона</div>
-    <input type="tel" id="phone" placeholder="Ваш номер телефона">
-    <button id="submit">Отправить</button>
+    <div class="modal__text">
+      Оставьте свой номер телефона.<br>
+      Дату замера согласуете с менеджером.<br>
+      <span>Перезвоним через 5 минут!</span>
+    </div>
+    <input class="modal__input" type="tel" id="phone" placeholder="+373">
+    <button class="btn-reset btn btn-call modal__btn" id="submit">Отправить</button>
+    <ul class="modal__social social">
+      <li class="social__item">
+        <a href="#" class="social__icon">
+          <svg class="icon-svg instagram" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__icon">
+          <svg class="icon-svg viber" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#viber"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__icon">
+          <svg class="icon-svg whatsapp" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#whatsapp"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__icon">
+          <svg class="icon-svg telegram" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
 </div>

@@ -7,40 +7,83 @@
   top: 0
   width: 100%
   height: 100%
-  background-color: rgba($graphite, 0.5)
+  background-color: rgba($white, 0.8)
   // filter: blur(20px)
 
-  &-content
+  &__content
     background-color: $graphite
-    margin: 20% auto
-    padding: 40px
+    margin: auto
+    transform: translateY(50%)
+    padding: 40px 50px
     border-radius: 20px
     width: 100%
     max-width: 680px
     text-align: center
     color: $grey
+    position: relative
+
+  &__suptitle
+    font-size: 26px
+    text-transform: uppercase
 
   &__head
     text-transform: uppercase
     @include font(600, 30, 35)
+    margin-bottom: 36px
+  &__text
+    letter-spacing: 0.05em
+    margin-bottom: 20px
+    span
+      font-weight: 700
+  &__input
+    max-width: 50% // 339/678
+    margin-bottom: 20px
+    padding: 10px
+    width: 100%
+    border: 1px solid $grey
+    &:focus
+      border-color: #a94a20
 
-.close
-  color: $graphite
-  font-size: 30px
-  font-weight: bold
-  position: absolute
-  top: 20px
-  right: 20px
+  &__btn
+    display: block
+    margin: 0 auto
+    margin-bottom: 37px
+    transition: border-color 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        color: $white
+        border-color: $white
 
-.close:hover,
-.close:focus
-  color: black
-  text-decoration: none
-  cursor: pointer
+  &__social
+    display: flex
+    align-items: center
+    justify-content: center
+    & li:not(:last-child)
+      margin-right: 68px
+    & svg
+      fill: $white
+      &.instagram
+        stroke: $white
+        @media (any-hover: hover)
+          &:hover
+            stroke: $grey
 
-input[type="tel"]
-  padding: 10px
-  margin: 10px 0
-  width: 100%
-  border-radius: 4px
-  border: 1px solid #ccc
+      @media (any-hover: hover)
+        &:hover
+          fill: $grey
+
+
+  &__close
+    color: $white
+    font-size: 30px
+    line-height: 1
+    font-weight: bold
+    position: absolute
+    top: 20px
+    right: 20px
+    transition: color 0.3s ease
+    &:hover,
+    &:focus
+      color: #a94a20
+      text-decoration: none
+      cursor: pointer

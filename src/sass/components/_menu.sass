@@ -263,12 +263,20 @@
           transform: rotate(45deg)
           transition: transform .3s ease-in-out, top .3s ease-in-out
 
-// МЕНЮ ДЛЯ ЯЗЫКОВ
-// @import 'language-menu'
-
   &-languages
-    & li a::after
-      top: 0 !important
+    & li
+      & a::after
+        top: 0 !important
+      & ul a
+        color: $white !important
+        padding: 7px
+        @media (any-hover: hover)
+          &:hover
+            color: $gold !important
+      @media (any-hover: hover)
+        &:hover > ul
+          top: 20px
+
     @include mediaPhone
       align-self: flex-end
       order: 1
@@ -278,7 +286,7 @@
           width: auto
           // order: 2
           &:hover
-            background-color: $blue
+            background-color: $grey
           &::after
             content: none !important
         & ul
@@ -291,11 +299,11 @@
           align-items: center
           top: 0
           opacity: 1
-          background-color: $blue
+          background-color: $grey
           & a
             padding-left: 10px !important
             &:hover
-              background-color: $blue
+              background-color: $grey
 
     // меню языков в строку на мобилках 
     @include mediaPhone

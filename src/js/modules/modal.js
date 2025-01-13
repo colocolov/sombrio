@@ -31,8 +31,9 @@ window.onclick = function(event) {
 submitBtn.onclick = function() {
   const phone = document.getElementById('phone').value;
   if (phone) {
-    alert('Номер телефона: ' + phone);
+    // alert('Номер телефона: ' + phone);
     modal.style.display = "none";
+    body.classList.remove("_lock");
   } else {
     alert('Пожалуйста, введите номер телефона.');
   }

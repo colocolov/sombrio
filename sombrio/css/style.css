@@ -1406,6 +1406,85 @@ input {
   transform: rotate(45deg);
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
 }
+.menu-languages li a::after {
+  top: 0 !important;
+}
+.menu-languages li ul a {
+  color: #FFFFFF !important;
+  padding: 7px;
+}
+@media (any-hover: hover) {
+  .menu-languages li ul a:hover {
+    color: #94796D !important;
+  }
+}
+@media (any-hover: hover) {
+  .menu-languages li:hover > ul {
+    top: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .menu-languages {
+    align-self: flex-end;
+    order: 1;
+  }
+  .menu-languages li {
+    display: flex;
+  }
+  .menu-languages li a {
+    width: auto;
+  }
+  .menu-languages li a:hover {
+    background-color: #F2F2F2;
+  }
+  .menu-languages li a::after {
+    content: none !important;
+  }
+  .menu-languages li ul {
+    width: auto;
+    height: auto;
+    max-height: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 0;
+    opacity: 1;
+    background-color: #F2F2F2;
+  }
+  .menu-languages li ul a {
+    padding-left: 10px !important;
+  }
+  .menu-languages li ul a:hover {
+    background-color: #F2F2F2;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .menu-languages li {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .menu-languages li a {
+    width: auto;
+    font-size: 20px;
+    padding-right: 0;
+  }
+  .menu-languages li a::after {
+    content: none !important;
+  }
+  .menu-languages li ul {
+    opacity: 1;
+    top: 0;
+    background-color: transparent;
+    max-height: unset;
+    display: flex;
+    z-index: 1;
+  }
+  .menu-languages li ul a {
+    font-size: 20px;
+    padding-right: 0;
+  }
+}
 
 .language-menu {
   z-index: 99;
@@ -2161,6 +2240,19 @@ input {
 }
 .footer__contacts-list {
   grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+}
+.footer__contacts-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__contacts-wrap:first-child {
+  font-weight: 800;
+}
+.footer__contacts-wrap:not(:last-child) {
+  margin-bottom: 6px;
 }
 .footer__head .heading__line {
   background-color: #FFFFFF;
@@ -2332,47 +2424,98 @@ input {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(93, 97, 108, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
 }
-.modal-content {
+.modal__content {
   background-color: #5D616C;
-  margin: 20% auto;
-  padding: 40px;
+  margin: auto;
+  transform: translateY(50%);
+  padding: 40px 50px;
   border-radius: 20px;
   width: 100%;
   max-width: 680px;
   text-align: center;
   color: #F2F2F2;
+  position: relative;
+}
+.modal__suptitle {
+  font-size: 26px;
+  text-transform: uppercase;
 }
 .modal__head {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 30px;
   line-height: 1.1666666667;
+  margin-bottom: 36px;
 }
-
-.close {
-  color: #5D616C;
+.modal__text {
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+.modal__text span {
+  font-weight: 700;
+}
+.modal__input {
+  max-width: 50%;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #F2F2F2;
+}
+.modal__input:focus {
+  border-color: #a94a20;
+}
+.modal__btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 37px;
+  transition: border-color 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .modal__btn:hover {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+  }
+}
+.modal__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__social li:not(:last-child) {
+  margin-right: 68px;
+}
+.modal__social svg {
+  fill: #FFFFFF;
+}
+.modal__social svg.instagram {
+  stroke: #FFFFFF;
+}
+@media (any-hover: hover) {
+  .modal__social svg.instagram:hover {
+    stroke: #F2F2F2;
+  }
+}
+@media (any-hover: hover) {
+  .modal__social svg:hover {
+    fill: #F2F2F2;
+  }
+}
+.modal__close {
+  color: #FFFFFF;
   font-size: 30px;
+  line-height: 1;
   font-weight: bold;
   position: absolute;
   top: 20px;
   right: 20px;
+  transition: color 0.3s ease;
 }
-
-.close:hover,
-.close:focus {
-  color: black;
+.modal__close:hover, .modal__close:focus {
+  color: #a94a20;
   text-decoration: none;
   cursor: pointer;
-}
-
-input[type=tel] {
-  padding: 10px;
-  margin: 10px 0;
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid #ccc;
 }
 
 /* No styles code below. Only in modules. */
