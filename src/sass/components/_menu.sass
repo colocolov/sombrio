@@ -1,7 +1,7 @@
 .menu
-  --height-span: 22px //--- ВЫСОТА БУРГЕРА
-  --width-span: 30px //--- ШИРИНА БУРГЕРА
-  --weight-span: 2px //--- ТОЛЩИНА ПОЛОСКИ БУРГЕРА
+  --height-span: 22px
+  --width-span: 30px
+  --weight-span: 2px
   // margin-left: 50px
   &__body
     // margin-top: -5px
@@ -11,8 +11,9 @@
       right: -100%
       width: 100%
       height: 100%
-      padding: 150px 30px 50px 30px
-      background-color: rgba($graphite, 0.9) // ---------- ЦВЕТ ФОНА У МЕНЮ
+      padding: 110px 30px 50px 30px
+      // ---------- ЦВЕТ ФОНА У МЕНЮ
+      background-color: rgba($graphite, 0.98)
       overflow: auto
       transition: right 0.5s ease 0s
       z-index: 2
@@ -24,13 +25,16 @@
         top: 0
         right: -100%
         width: 100%
-        height: 85px
-        background-color: $graphite // ---------- ЦВЕТ ФОНА У ШАПКИ
+        height: 101px
+        // ---------- ЦВЕТ ФОНА У ШАПКИ
+        background-color: $graphite
         // background-color: $text
         transition: right 0.5s ease 0s
         z-index: 2
     &._active
       right: 0
+      display: flex
+      flex-direction: column
       &::before
         right: 0
   &__list
@@ -43,6 +47,7 @@
       align-items: flex-end
       justify-content: flex-start
       order: 2
+      margin-bottom: 20px
     & .menu-item-has-children > a
       &::after
         content: ''
@@ -76,8 +81,9 @@
         margin-bottom: 7px
       @include mediaPhone
         width: 100%
-        padding: 10px 20px
+        padding: 10px 0px
         margin-bottom: 0
+        color: $white
     & li.current-menu-item a
       background-color: lighten($graphite, 3)
     & li ul
@@ -87,7 +93,6 @@
       background-color: lighten($graphite, 1)
       z-index: 50
       //display: none
-
       overflow: hidden
       max-height: 0
       opacity: 0
@@ -170,13 +175,15 @@
     //     .menu__arrow
     //       transform: rotate(-180deg)
     @include mediaPhone
-      margin-bottom: 40px
+      margin-bottom: 10px
       font-weight: 700
       font-size: 32px
-      color: $graphite // ---------- ЦВЕТ ССЫЛОК НА МОБИЛКАХ
+      color: $white // ---------- ЦВЕТ ССЫЛОК НА МОБИЛКАХ
+      &::before
+        content: none
       &:not(:last-child)
         margin-right: 0
-        margin-bottom: 10px
+        margin-bottom: 0
   // стрелка
   // &__arrow
   //   width: 12px
@@ -265,6 +272,9 @@
 
   &-languages
     & li
+      font-weight: 700
+      &::before
+        content: none
       & a::after
         top: 0 !important
       & ul a
@@ -283,6 +293,7 @@
       & li
         display: flex
         & a
+          text-transform: uppercase
           width: auto
           // order: 2
           &:hover
@@ -314,7 +325,9 @@
       & li a
         width: auto
         font-size: 20px
-        padding-right: 0
+        background-color: $gold
+        padding: 10px
+        margin-left: 7px
         &::after
           content: none !important
       & li ul
@@ -326,7 +339,9 @@
         z-index: 1
       & li ul a
         font-size: 20px
-        padding-right: 0
+        padding: 10px
+
+        // padding-right: 0
 
 // подменю  
 .sub-menu

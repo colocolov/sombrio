@@ -16,9 +16,15 @@
         &:hover
           fill: none
           stroke: $gold
+      @include mediaPhone
+        stroke: $white
     @media (any-hover: hover)
       &:hover
         fill: $gold
+    @include mediaPhone
+      fill: $white
+      width: 40px
+      height: 40px
 
 // .icon-svg
 //   fill: transparent

@@ -8,7 +8,7 @@ import "./modules/animateHead.js";
 import "./modules/animateAdvantage.js";
 import "./modules/animateNumber.js";
 import "./modules/certificates.js";
-//import "./modules/dinam-adap.js";
+import "./modules/dinam-adap.js";
 import "./modules/stockSlider.js";
 import "./modules/modal.js";
 

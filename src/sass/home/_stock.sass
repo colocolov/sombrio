@@ -15,7 +15,8 @@
   &__bullet
     position: relative
     z-index: 3
-    margin: auto 0
+    margin-top: auto
+    margin-bottom: 35px
     display: flex
     flex-wrap: wrap
     gap: 20px 22px
@@ -25,11 +26,13 @@
     text-align: center
     & .swiper-pagination-bullet
       border: 2px solid $graphite
-      padding: 12px
+      padding: 14px
       background-color: $graphite
       flex: 1 1 47%
       opacity: 1
       border-radius: 0
+      margin-right: 0
+      margin-left: 0
       height: auto
       transition: background-color 0.3s ease-in, color 0.3s ease
       @media (any-hover: hover)
@@ -45,22 +48,23 @@
           color: $gold
   &__quantity
     margin-top: auto
-    @include font(500, 24, 32)
+    @include font(500, 24, 24)
     span
-      @include font(700, 80, 105)
+      @include font(700, 80, 80)
     &-plus
-      @include font(700, 80, 105)
+      @include font(700, 80, 80)
       display: inline-block
   &__wrap
     flex-basis: 50%
     width: 660px
+    margin-top: 54px
   &__slider
     &-wrap
   &__slide
   &__text
     max-width: 430px
     margin-left: auto
-    margin-bottom: 20px
+    margin-bottom: 60px
     height: 165px
   &__title
     text-transform: uppercase
@@ -80,19 +84,16 @@
     svg
       width: 20px
 
-.stock--prev,
-.stock--next
-  display: flex
-  align-items: center
-  justify-content: center
-  svg
-    transform: rotate(180deg)
-    &:hover
-      transform: rotate(180deg) translateX(-3px)
+  &--prev,
+  &--next
+    display: flex
+    align-items: center
+    justify-content: center
+    svg
+      transform: rotate(180deg)
+      &:hover
+        transform: rotate(180deg) translateX(-3px)
 
-
-
-.stock
   &__nested-slider
     position: relative
     width: 660px

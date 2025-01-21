@@ -6,25 +6,40 @@
   &__container
     display: flex
     flex-direction: column
-    gap: 130px
+    gap: 110px
+    @include mediaTablet
+      row-gap: 60px
 
   &__contacts
     display: grid
     grid-template: repeat(2, 1fr) / repeat(3, 1fr)
     // flex-direction: column
-    gap: 40px
+    gap: 10px 40px
+    @include mediaTablet
+      grid-template-columns: repeat(2, 1fr)
+      gap: 40px 0
 
     &-top,
     &-schedule
-      grid-column: 3 span
+      grid-column: span 3
       display: grid
       grid-template-columns: repeat(3, 1fr)
       gap: 40px
+      @include mediaTablet
+        grid-template-columns: repeat(2, 1fr)
+    &-schedule
+      @include mediaTablet
+        grid-template-columns: 1fr
+        grid-column: span 2
+        // gap: 0 !important
 
     &-list
       grid-column: 3 / 4
       display: flex
       flex-direction: column
+      @include mediaTablet
+        grid-column: span 1
+        // row-gap: 0
     &-wrap
       display: flex
       align-items: center
@@ -38,6 +53,8 @@
     &-mean
 
   &__head
+    @include mediaTablet
+      grid-column: span 2
     & .heading__line
       background-color: $white
 
@@ -73,6 +90,9 @@
       @include font(700, 60, 62)
       color: $grey
       transition: letter-spacing 0.3s ease-in
+      @include mediaPhoneSm
+        font-size: 48px
+
       span
         display: block
         color: #878787
@@ -86,6 +106,8 @@
       color: $white
       text-decoration: underline
       font-size: 24px
+    @include mediaTablet
+      margin-bottom: 40px
 
 
   &__nav
@@ -93,9 +115,14 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 40px
+    @include mediaTablet
+      grid-template-columns: repeat(2, 1fr)
     &-email
       @include font(600, 24, 24)
       margin-top: auto
+      @include mediaTablet
+        grid-column: span 2
+        grid-row-start: 2
       a
         transition: color 0.3s ease-in
         color: $grey
@@ -138,6 +165,8 @@
           //   color: $grey
 
     &-socail
+      @include mediaTablet
+        margin-left: auto
       & .footer__nav-item
         padding-left: 46px
         &::after

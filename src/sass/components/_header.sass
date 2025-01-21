@@ -1,5 +1,5 @@
 .header
-  padding: 34px 0
+  padding: 23px 0
   @include mediaTablet
     position: fixed
     background-color: $grey
@@ -12,8 +12,24 @@
     left: 0
     width: 100%
     z-index: 7
-    background-color: $graphite
+    // background-color: $graphite
+    // padding-top: 160px
 
   &__container
-    @include fx-all
+    // @include fx-all
+    display: flex
+    align-items: center
+    gap: 0 20px
+    @media screen and (max-width: 1050px)
+      flex-wrap: wrap
+
+  // &__logo
+  //   @include mediaPhone
+  //     z-index: 5
+
+  &__menu
+    margin-right: auto
+    margin-left: auto
+    @media screen and (max-width: 1050px)
+      margin-right: 0
 

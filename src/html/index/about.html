@@ -28,8 +28,9 @@
     <div class="about__clip">
       <img class="about__bg" id="videoBackground" src="@img/bg/placeholder-image.jpg" alt="Video Background">
       <div class="about__video _vbg">
-        <video id="videoAbout" src="resources/video/second_video.mp4" playsinline muted loop
-               class="about__movie"></video>
+        <video id="videoAbout" class="about__movie" playsinline muted loop preload="none">
+          <source src="resources/video/second_video.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
 

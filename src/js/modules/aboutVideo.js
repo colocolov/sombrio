@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (video.paused) {
       videoBackground.style.display = "none"; // Убираем фон
       video.style.display = "block"; // Показываем видео
+      video.load();
       video.play();
     } else {
       video.pause();
