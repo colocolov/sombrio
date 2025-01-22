@@ -3,6 +3,9 @@
   padding-bottom: var(--sectionPaddingBottom)
 
   &__container
+    @include mediaPhone
+      padding-right: 0
+      padding-left: 0
   &__content
     display: flex
     flex-wrap: wrap
@@ -10,13 +13,22 @@
     gap: 5px
   &__img
     padding-bottom: 460px
-    flex: 1 1 49.80%
+    flex: 1 1 49%
     &:last-child
       padding-bottom: 650px
+    @include mediaTablet
+      &:last-child
+        padding-bottom: 460px
+    @include mediaPhone
+      padding-bottom: 300px
+      &:nth-child(2)
+        display: none
+      &:last-child
+        padding-bottom: 300px
     @media (any-hover: hover)
-    &:hover
-      img
-        transform: scale(1.03)
+      &:hover
+        img
+          transform: scale(1.03)
 
   &__btn
     width: 100%

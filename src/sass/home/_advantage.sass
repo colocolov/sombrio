@@ -5,12 +5,16 @@
   &__container
     display: flex
     gap: 40px
+    @include mediaTablet
+      flex-direction: column
 
   &__content
     display: flex
     flex-direction: column
     align-items: flex-start
     flex: 1
+    @include mediaTablet
+      // flex-direction: column-reverse
   &__head
     margin-bottom: 20px
     max-width: 425px
@@ -31,11 +35,14 @@
         opacity: 1
 
   &__wrap
-    width: 893px
+    width: 65.66%
+    @include mediaTablet
+      width: 100%
   &__list
     gap: 20px
     display: flex
     flex-direction: column
+
   &__item
     padding: 10px
     width: 100%
@@ -43,13 +50,20 @@
     // height: 50px
     display: flex
     align-items: center
-    // АНИМАЦИЯ
     opacity: 0
-    transform: translateX(-100px) // Элемент будет начинать за пределами экрана */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out // Плавное появление */
+    transform: translateX(-100px)
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out
+    @include mediaPhone
+      flex-direction: column
+      padding-bottom: 20px
+      &.active .advantage__text
+        // display: block
+        opacity: 1
+        max-height: 300px
+        transition: opacity 0.8s ease, max-height 0.5s ease-in
     &.in-view
       opacity: 1
-      transform: translateX(0) // Элемент переместится в исходное положение */
+      transform: translateX(0)
   &__name
     padding: 40px 30px
     width: 255px
@@ -57,6 +71,11 @@
     font-weight: 700
     text-transform: uppercase
     // flex: 1
+    @include mediaPhone
+      border-right: none
+      text-align: center
+      padding: 20px
+      padding-bottom: 5px
 
   &__descr
     padding-left: 20px
@@ -66,12 +85,21 @@
     justify-content: space-between
     width: 100%
     flex: 1
+    @include mediaPhone
+      flex-direction: column
+      align-items: center
 
   &__text
     width: 328px
     text-align: center
     font-size: 14px
     text-transform: uppercase
+
+    @include mediaPhone
+      // display: none
+      opacity: 0
+      max-height: 0
+      overflow: hidden
     span
       font-weight: 700
 
@@ -80,6 +108,8 @@
     flex-direction: column
     gap: 2px
     width: 40px
+    @include mediaPhone
+      margin-top: 10px
     span
       background-color: $graphite
       height: 2px

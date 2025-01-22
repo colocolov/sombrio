@@ -6,6 +6,7 @@ import "./modules/nav.js";
 import "./modules/aboutVideo.js";
 import "./modules/animateHead.js";
 import "./modules/animateAdvantage.js";
+import "./modules/advantageShowText.js";
 import "./modules/animateNumber.js";
 import "./modules/certificates.js";
 import "./modules/dinam-adap.js";

@@ -2,6 +2,9 @@
   --height: 800px
   // padding-top: 40px
   padding-bottom: 30px
+  @include mediaPhone
+    padding-top: 100px
+    --height: 550px
   &__container
     display: flex
     justify-content: flex-end
@@ -43,6 +46,10 @@
     z-index: 1
     display: flex
     justify-content: center
+    @include mediaTablet
+      text-align: center
+    @include mediaPhone
+      font-size: 30px
 
   &__social
     margin-right: 40px
