@@ -11,6 +11,9 @@
     height: var(--height)
     flex-direction: column
     padding-bottom: 78px
+    @include mediaTablet
+      position: absolute
+      bottom: 0
 
   &__wrapper
     position: relative
@@ -34,10 +37,22 @@
       z-index: 1
 
   &__clip
+    @include mediaTablet
+      position: relative
+      overflow: hidden
 
   &__video
     border: none
     display: block
+    @include mediaTablet
+      position: absolute !important
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      // min-width: 100%
+      // height: auto !important
+      width: auto !important
+
 
   &__head
     text-transform: uppercase

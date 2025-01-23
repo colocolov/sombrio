@@ -1,6 +1,8 @@
 .stock
   padding-top: var(--sectionPaddingTop)
   padding-bottom: var(--sectionPaddingBottom)
+  @include mediaPhone
+    padding-bottom: 0
   &__container
     display: flex
     gap: 40px
@@ -34,6 +36,9 @@
     text-align: center
     @include mediaPhone
       order: 4
+      gap: 12px
+      font-size: 14px
+      margin-bottom: 0
     & .swiper-pagination-bullet
       border: 2px solid $graphite
       padding: 14px
@@ -46,8 +51,11 @@
       height: auto
       transition: background-color 0.3s ease-in, color 0.3s ease
       @include mediaPhoneMid
-
         flex: 1 1 48%
+        // max-width: 48%
+        margin: 0 !important
+        padding: 10px
+
       @media (any-hover: hover) and (pointer: fine)
         &:hover
           background-color: transparent
