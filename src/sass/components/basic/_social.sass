@@ -12,13 +12,13 @@
       stroke-width: 2px
       padding: 1px
       transition: stroke 0.3s ease-in
-      @media (any-hover: hover)
+      @media (any-hover: hover) and (pointer: fine)
         &:hover
           fill: none
           stroke: $gold
       @include mediaPhone
         stroke: $white
-    @media (any-hover: hover)
+    @media (any-hover: hover) and (pointer: fine)
       &:hover
         fill: $gold
     @include mediaPhone

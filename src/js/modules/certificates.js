@@ -3,7 +3,7 @@
 import _vars from "../_vars.js";
 import Swiper, { Navigation, Pagination, Autoplay, EffectFade, Parallax } from "swiper";
 
-Swiper.use([Pagination, Navigation]);
+Swiper.use([Navigation]);
 
 // устанавливаем свой размер отступов через глобальную переменную --gap
 // const gap = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--gap"));
@@ -33,10 +33,10 @@ if (_vars.certificatesSliderEl) {
       // для ппрвильного направления
     },  
     // показ кол-ва слайдов (работает, когда откл effect: "fade")
-    slidesPerView: 2,
+    slidesPerView: 1,
     // расстояние между слайдами
     // spaceBetween: gap, // свой размер
-    spaceBetween: 94,
+    spaceBetween: 0,
     // кол-во пролистываемых слайдов
     slidesPerGroup: 1,
     // стартовый слайд
@@ -45,13 +45,16 @@ if (_vars.certificatesSliderEl) {
     centeredSlides: false,
     
     // адаптив
-    // breakpoints: {
-    //   // when window width is >= 320px
-    //   480: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 20,
-    //   },
-    // },
+    breakpoints: {
+      // when window width is >= 320px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      992: {
+        spaceBetween: 70,
+      },
+    },
 
     //отложенная загрузка:
     //отключаем презагрузку картинок

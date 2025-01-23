@@ -65,6 +65,7 @@
     &--tel
       margin-right: 40px !important
       font-weight: 700
+      flex-shrink: 0
       @include mediaPhone
         width: 100%
         margin-right: 0 !important
@@ -72,7 +73,7 @@
         text-align: right
       a
         color: $graphite
-        @media (any-hover: hover)
+        @media (any-hover: hover) and (pointer: fine)
           &:hover
             color: $gold
         @include mediaPhone

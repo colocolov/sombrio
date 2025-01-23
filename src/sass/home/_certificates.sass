@@ -1,6 +1,12 @@
 .certificates
+  --height: 532px
   padding-top: var(--sectionPaddingTop)
   padding-bottom: var(--sectionPaddingBottom)
+  @include mediaPhone
+    --height: 600px
+  @include mediaPhoneSm
+    --height: 500px
+
   &__container
   &__content
   &__head
@@ -10,8 +16,17 @@
   &__wrap
     position: relative
   &__slider
-    height: 532px
+    height: var(--height)
     width: 846px
+    @include mediaTablet
+      width: 85%
+    @include mediaPhone
+      width: 69.76%
+      height: var(--height)
+    @include mediaPhoneSm
+      width: auto
+
+
   &__navigation
     position: absolute
     top: 50%
@@ -27,7 +42,13 @@
     svg
       width: 60px
       transform: translateX(30px)
-      @media (any-hover: hover)
+      @include mediaPhone
+        width: 40px
+        transform: translateX(20px)
+      @include mediaPhone
+        width: 30px
+        transform: translateX(10px)
+      @media (any-hover: hover) and (pointer: fine)
         &:hover
           transform: translateX(20px)
           fill: $graphite
@@ -36,15 +57,27 @@
     width: 376px
     // padding: 1px
   &__img
-    padding-bottom: 532px
+    padding-bottom: var(--height)
 
 .certificates--prev
   height: 73px
   width: 73px
   border-width: 2px
   transform: rotate(0deg)
+  @include mediaPhone
+    width: 45px
+    height: 45px
+  @include mediaPhoneSm
+    width: 35px
+    height: 35px
 .certificates--next
   width: 73px
   height: 73px
   border-width: 2px
   transform: rotate(180deg)
+  @include mediaPhone
+    width: 45px
+    height: 45px
+  @include mediaPhoneSm
+    width: 35px
+    height: 35px

@@ -4,6 +4,8 @@
   &__container
     display: flex
     gap: 40px
+    @include mediaPhone
+      flex-direction: column
   &__content
     display: flex
     flex-direction: column
@@ -12,6 +14,12 @@
   &__head
     width: 100%
     margin-bottom: 20px
+    @include mediaPhone
+      order: 2
+  &__btn
+    @include mediaPhone
+      order: 1
+      margin-bottom: 60px
   &__bullet
     position: relative
     z-index: 3
@@ -24,18 +32,23 @@
     color: $white
     text-transform: uppercase
     text-align: center
+    @include mediaPhone
+      order: 4
     & .swiper-pagination-bullet
       border: 2px solid $graphite
       padding: 14px
       background-color: $graphite
-      flex: 1 1 47%
+      flex: 1 1 46%
       opacity: 1
       border-radius: 0
       margin-right: 0
       margin-left: 0
       height: auto
       transition: background-color 0.3s ease-in, color 0.3s ease
-      @media (any-hover: hover)
+      @include mediaPhoneMid
+
+        flex: 1 1 48%
+      @media (any-hover: hover) and (pointer: fine)
         &:hover
           background-color: transparent
           color: $graphite
@@ -43,12 +56,15 @@
     & .swiper-pagination-bullet-active
       border: 2px solid $gold
       background-color: $gold
-      @media (any-hover: hover)
+      @media (any-hover: hover) and (pointer: fine)
         &:hover
           color: $gold
   &__quantity
     margin-top: auto
     @include font(500, 24, 24)
+    @include mediaPhone
+      order: 3
+      margin-bottom: 25px
     span
       @include font(700, 80, 80)
     &-plus
@@ -56,24 +72,45 @@
       display: inline-block
   &__wrap
     flex-basis: 50%
-    width: 660px
+    width: 48.52%
     margin-top: 54px
+    @include mediaPhone
+      margin-top: 0
+      width: 100%
   &__slider
     &-wrap
   &__slide
+    @include mediaPhone
+      display: flex
+      flex-direction: column-reverse
+
   &__text
     max-width: 430px
     margin-left: auto
     margin-bottom: 60px
     height: 165px
+    @include mediaNotebook
+      padding-left: 60px
+    @include mediaPhone
+      width: 100%
+      max-width: none
+      padding-left: 0
+      // padding-right: 15px
+      margin: 0
+      text-align: center
+      height: auto
   &__title
     text-transform: uppercase
     margin-bottom: 10px
     @include font(700, 24, 32)
   &__descr
     text-align: justify
+    @include mediaPhone
+      padding: 0 15px
     // padding-bottom: 50px
   &__img
+    @include mediaPhone
+      margin-bottom: 90px
     // padding-bottom: 550px
   &__navigation
     position: absolute
@@ -81,6 +118,17 @@
     left: 2px
     flex-direction: column
     gap: 20px
+    @include mediaPhone
+      // bottom: 153px
+      left: 50%
+      transform: translateX(-50%)
+      gap: 40px
+      top: 570px
+      flex-direction: row-reverse
+    @include mediaPhoneMid
+      top: 470px
+    @include mediaPhoneSm
+      top: 320px
     svg
       width: 20px
 
@@ -98,6 +146,12 @@
     position: relative
     width: 660px
     height: 550px
+    @include mediaPhone
+      width: 100%
+    @include mediaPhoneMid
+      height: 450px
+    @include mediaPhoneSm
+      height: 300px
   &__nested-slider-wrap
   &__nested-slide
     img

@@ -11,7 +11,7 @@
       right: -100%
       width: 100%
       height: 100%
-      padding: 110px 30px 50px 30px
+      padding: 110px 25px 50px 25px
       // ---------- ЦВЕТ ФОНА У МЕНЮ
       background-color: rgba($graphite, 0.98)
       overflow: auto
@@ -40,6 +40,9 @@
   &__list
     @include fx-all
     flex-wrap: wrap
+    column-gap: 39px
+    justify-content: flex-end
+    row-gap: 10px
     @include mediaNotebook
       flex-wrap: wrap
     @include mediaPhone
@@ -71,7 +74,7 @@
       transition: background-color 0.3s ease
       color: $graphite
       transition: color 0.3s ease-in
-      @media (any-hover: hover)
+      @media (any-hover: hover) and (pointer: fine)
       &:hover
         // background-color: lighten($graphite, 3)
         // &:last-child a
@@ -129,7 +132,7 @@
     // text-transform: uppercase
     transition: color 0.3s ease
     &:not(:last-child)
-      margin-right: 39px
+      // margin-right: 39px
     // нижняя линия при наведении
     &::before
       position: absolute
@@ -140,7 +143,7 @@
       height: 2px
       background-color: $graphite
       transition: width 0.5s ease
-    @media (any-hover: hover)
+    @media (any-hover: hover) and (pointer: fine)
       &:hover
         &::before
           width: 100%
@@ -280,10 +283,10 @@
       & ul a
         color: $white !important
         padding: 7px
-        @media (any-hover: hover)
+        @media (any-hover: hover) and (pointer: fine)
           &:hover
             color: $gold !important
-      @media (any-hover: hover)
+      @media (any-hover: hover) and (pointer: fine)
         &:hover > ul
           top: 20px
 
@@ -415,7 +418,7 @@
   @include mediaPhone
     padding: 0
     width: auto
-  @media (any-hover: hover)
+  @media (any-hover: hover) and (pointer: fine)
     &:hover
       background-color: lighten($graphite, 3)
 

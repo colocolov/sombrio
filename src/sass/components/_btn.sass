@@ -27,9 +27,10 @@
     // color: $white
   &:active // НАЖАТИЕ
     transform: translateY(-2px)
-    // background: $red-tab
+    // background: lighten($graphite, 1.5)
+    background: $gradient-dark
     // color: $white
-  @media (any-hover: hover)
+  @media (any-hover: hover) and (pointer: fine)
     &:hover
       // transform: translateY(-4px)
       background: transparent
@@ -41,7 +42,7 @@
     background-color: #a94a20
     border: 2px solid #a94a20
     color: $grey
-    @media (any-hover: hover)
+    @media (any-hover: hover) and (pointer: fine)
       &:hover
         color: #a94a20
 
@@ -60,7 +61,7 @@
     &-prev
       transform: rotate(180deg)
       // transform: rotate(90deg)
-      @media (any-hover: hover)
+      @media (any-hover: hover) and (pointer: fine)
         &:hover
           border-color: $graphite
     &-svg
@@ -69,7 +70,7 @@
       fill: $gold
       transition: transform 0.3s ease-in, fill 0.3s ease
     &-next
-      @media (any-hover: hover)
+      @media (any-hover: hover) and (pointer: fine)
         &:hover
           border-color: $graphite
     &:focus

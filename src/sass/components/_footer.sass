@@ -72,7 +72,7 @@
       height: 1px
       background-color: $grey
       transition: width 0.3s ease-in
-    @media (any-hover: hover)
+    @media (any-hover: hover) and (pointer: fine)
       &:hover
         &::before
           width: 43px
@@ -97,7 +97,7 @@
         display: block
         color: #878787
         transition: color 0.3s ease-in
-      @media (any-hover: hover)
+      @media (any-hover: hover) and (pointer: fine)
         &:hover
           letter-spacing: 0.01em
           span
@@ -126,7 +126,7 @@
       a
         transition: color 0.3s ease-in
         color: $grey
-        @media (any-hover: hover)
+        @media (any-hover: hover) and (pointer: fine)
           &:hover
             color: $gold
     &-menu
@@ -157,7 +157,7 @@
           height: 1px
           background-color: $grey
           transition: width 0.5s ease
-        @media (any-hover: hover)
+        @media (any-hover: hover) and (pointer: fine)
           &:hover
             &::before
               width: 100%
@@ -179,7 +179,7 @@
           height: 1px
           background-color: $grey
           transition: width 0.3s ease-in, height 0.3s ease-in, bottom 0.5s ease-in-out
-        @media (any-hover: hover)
+        @media (any-hover: hover) and (pointer: fine)
           &:hover
             & a::before
               width: 0
