@@ -1,4 +1,4 @@
-function animateNumbers(selector, start, end, duration) {
+function animateNumbers(selector, start, duration) { //!!!!!!!!!!!!
   const elements = document.querySelectorAll(selector);
 
   if (!elements.length) return; // Если элементов нет, прерываем выполнение
@@ -31,6 +31,7 @@ function animateNumbers(selector, start, end, duration) {
     elements.forEach((element) => {
       if (isInViewport(element) && !element.classList.contains('animated')) {
         element.classList.add('animated'); // Убираем повторное выполнение
+         const end = parseInt(element.textContent, 10) || 0; //!!!!!!!!!!!!
         animateCount(element, start, end, duration);
       }
     });
@@ -41,5 +42,5 @@ function animateNumbers(selector, start, end, duration) {
 }
 
 // Вызываем функцию для всех чисел после подключения файла
-animateNumbers('.advantage__number span', 0, 5, 1000);
-animateNumbers('.stock__quantity span', 0, 500, 1000);
+animateNumbers('.advantage__number span', 0, 1000); //!!!!!!!!!!!!
+animateNumbers('.stock__quantity span', 0, 1000);//!!!!!!!!!!!!

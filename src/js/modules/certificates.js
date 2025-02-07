@@ -52,6 +52,7 @@ if (_vars.certificatesSliderEl) {
         spaceBetween: 25,
       },
       992: {
+        slidesPerView: 2,
         spaceBetween: 70,
       },
     },

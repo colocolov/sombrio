@@ -5,12 +5,9 @@ import Swiper, { Navigation, Pagination, Autoplay, EffectFade, Parallax } from "
 
 Swiper.use([Pagination, Navigation, EffectFade, Autoplay]);
 
-// устанавливаем свой размер отступов через глобальную переменную --gap
-const gap = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--gap"));
-// console.log(gap);
-const bulletTexts = ["РУЛОННЫЕ ШТОРЫ", "ВЕРТИКАЛЬНЫЕ ЖАЛЮЗИ", "ДЕНЬ-НОЧЬ ШТОРЫ", "МАНСАРДНЫЕ ШТОРЫ", "ПЛИССЕ ШТОРЫ", "МАСКИТНАЯ СЕТКА", "ДЕРЕВЯННЫЕ ГОРИЗОНТАЛЬНЫЕ ЖАЛЮЗИ"]; // Массив с уникальными текстами
-
 if (_vars.stockSliderEl) {
+
+  const bulletTexts = _vars.stockSliderEl.dataset.bulletTexts.split(','); // Получаем массив текстов
 
   // слайдер на главной
   new Swiper(_vars.stockSliderEl, {
@@ -36,12 +33,12 @@ if (_vars.stockSliderEl) {
     // буллеты
     pagination: {
       el: ".stock__bullet",
-      type: "bullets",
+      // type: "bullets",
       clickable: true,
       // dynamicBullets: true,
       renderBullet: function (index, className) {
         // Возвращаем span с текстом из массива на основе индекса
-        return '<span class="' + className + '">' + bulletTexts[index] + '</span>';
+        return `<span class="${className}">${bulletTexts[index]}</span>`;
       }  
     },
     //эффект перехода слайда (только если показ по 1-му слайду)
