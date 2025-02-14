@@ -1604,12 +1604,6 @@ input {
     width: auto;
   }
 }
-@media (any-hover: hover) and (pointer: fine) {
-  .language-menu > ul > li a:hover {
-    background-color: rgb(100.0791044776, 104.3835820896, 116.2208955224);
-  }
-}
-
 .language-menu > ul > li:hover ~ a {
   text-decoration: underline;
 }
