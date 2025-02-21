@@ -953,7 +953,7 @@ a:hover {
 .page {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
-  scrollbar-color: #fff;
+  scrollbar-color: #5D616C #FFFFFF;
   scrollbar-width: thin;
   height: 100%;
 }
@@ -1081,8 +1081,6 @@ input {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -5;
-  position: fixed;
 }
 
 .icon-svg {
@@ -3026,26 +3024,51 @@ input {
 
 /* Модальное окно */
 .modal {
-  display: none;
   position: fixed;
-  z-index: 30;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
   background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  transition: 0.6s ease-in;
+}
+.modal::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal.open .modal__content {
+  opacity: 1;
+  transform: translate(0px, 0%);
 }
 .modal__content {
-  background-color: #5D616C;
-  margin: auto;
-  transform: translateY(50%);
-  padding: 40px 50px;
-  border-radius: 20px;
+  position: relative;
   width: 100%;
   max-width: 680px;
+  margin: 50px auto;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #5D616C;
+  padding: 40px 50px;
+  border-radius: 20px;
   text-align: center;
   color: #F2F2F2;
-  position: relative;
+  cursor: auto;
+  opacity: 0;
+  transform: translate(0px, -100%);
+  transition: 0.6s ease-in;
 }
 @media screen and (max-width: 767.98px) {
   .modal__content {

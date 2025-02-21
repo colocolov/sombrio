@@ -57,6 +57,7 @@ const body = document.querySelector(".page__body");
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 const menuLink = document.querySelectorAll(".menu__item");
+const socialLink = document.querySelectorAll(".social__item");
 if (iconMenu) {
   iconMenu.addEventListener("click", (e) => {
     body.classList.toggle("_lock");
@@ -64,9 +65,17 @@ if (iconMenu) {
     menuBody.classList.toggle("_active");
   });
 }
-// закрытие при клике
+// закрытие при клике по меню
 if (menuLink.length) {
   menuLink.forEach((item) => {
+    item.addEventListener("click", () => {
+      removeActiveClass();
+    });
+  });
+}
+// закрытие при клике по соц сетям
+if (socialLink.length) {
+  socialLink.forEach((item) => {
     item.addEventListener("click", () => {
       removeActiveClass();
     });
