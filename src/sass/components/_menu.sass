@@ -11,11 +11,11 @@
       right: -100%
       width: 100%
       height: 100%
-      padding: 110px 25px 50px 25px
+      padding: 135px 25px 50px 25px
       // ---------- ЦВЕТ ФОНА У МЕНЮ
       background-color: rgba($graphite, 0.98)
       overflow: auto
-      transition: right 0.5s ease 0s
+      transition: right 0.3s ease
       z-index: 2
       // justify-content: flex-end
       // подложка под верхнее меню, если оно имеет фон
@@ -27,9 +27,9 @@
         width: 100%
         height: 101px
         // ---------- ЦВЕТ ФОНА У ШАПКИ
-        background-color: $graphite
+        background-color: $grey
         // background-color: $text
-        transition: right 0.5s ease 0s
+        transition: right 0.3s ease
         z-index: 2
     &._active
       right: 0
@@ -88,7 +88,7 @@
         margin-bottom: 0
         color: $white
     & li.current-menu-item a
-      background-color: lighten($graphite, 3)
+      //background-color: lighten($graphite, 3)
     & li ul
       position: absolute
       left: 0
@@ -120,6 +120,7 @@
       border-top: 1px solid rgba(0, 0, 0, 0.2)
       @include mediaPhone
         border: none
+        margin-bottom: 0
         & a
           padding-left: 40px
 
@@ -262,7 +263,7 @@
     &._active
       span
         transform: scale(0)
-        background-color: $white // ---------- ЦВЕТ ПОЛОСОК У БУРГЕРА ПРИ ЗАКРЫТИИ
+        // background-color: $white // ---------- ЦВЕТ ПОЛОСОК У БУРГЕРА ПРИ ЗАКРЫТИИ
         transition: transform 0.3s ease-in-out, background-color .5s ease-out
         &:first-child
           top: calc( 50% - 2px )
@@ -368,111 +369,111 @@
 
 //// мой код подменю
 
-.language-menu
-  z-index: 99
-  margin-left: 30px
-  @include mediaPhone
-    margin-left: auto
-    // margin-bottom: 40px
-    position: relative
-    top: -20px
-    display: none
-    // transform: translateX(-1000%)
-  &._active
-    // transform: translateX(0)
-    display: block
+// .language-menu
+//   z-index: 99
+//   margin-left: 30px
+//   @include mediaPhone
+//     margin-left: auto
+//     // margin-bottom: 40px
+//     position: relative
+//     top: -20px
+//     display: none
+//     // transform: translateX(-1000%)
+//   &._active
+//     // transform: translateX(0)
+//     display: block
 
-.language-menu > ul
-  // display: inline-block
-  position: relative
-  pointer-events: auto
-  display: flex
-  align-items: center
-  & li ul li
-    width: 100%
-    border-top: 1px solid rgba(0, 0, 0, 0.2)
-    @include mediaPhone
-      border: none
+// .language-menu > ul
+//   // display: inline-block
+//   position: relative
+//   pointer-events: auto
+//   display: flex
+//   align-items: center
+//   & li ul li
+//     width: 100%
+//     border-top: 1px solid rgba(0, 0, 0, 0.2)
+//     @include mediaPhone
+//       border: none
 
-.language-menu > ul > li
-  display: flex
-  align-items: center
-  width: auto
-  flex-wrap: nowrap
-  // position: relative
+// .language-menu > ul > li
+//   display: flex
+//   align-items: center
+//   width: auto
+//   flex-wrap: nowrap
+//   // position: relative
 
-.language-menu > ul > li > ul
-  @include mediaPhone
-    opacity: 1
-    top: 0
-    width: auto
-    max-height: min-content
-    display: flex
-    align-items: center
-    background-color: $graphite
+// .language-menu > ul > li > ul
+//   @include mediaPhone
+//     opacity: 1
+//     top: 0
+//     width: auto
+//     max-height: min-content
+//     display: flex
+//     align-items: center
+//     background-color: $graphite
 
-.language-menu > ul > li a
-  display: block
-  // padding: 20px
-  transition: background-color 0.3s ease
-  @include mediaPhone
-    padding: 0
-    width: auto
-  @media (any-hover: hover) and (pointer: fine)
-    &:hover
-      // background-color: lighten($graphite, 3)
+// .language-menu > ul > li a
+//   display: block
+//   // padding: 20px
+//   transition: background-color 0.3s ease
+//   @include mediaPhone
+//     padding: 0
+//     width: auto
+//   @media (any-hover: hover) and (pointer: fine)
+//     &:hover
+//       // background-color: lighten($graphite, 3)
 
 
-.language-menu > ul > li:hover ~ a
-  text-decoration: underline
+// .language-menu > ul > li:hover ~ a
+//   text-decoration: underline
 
-.menu-item-language
-  @include mediaPhone
-    display: flex
-    align-items: center
+// .menu-item-language
+//   @include mediaPhone
+//     display: flex
+//     align-items: center
 
-.language-dropdown
-  background-color: $graphite
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3)
-  display: none
-  right: 0
-  // left: 0
-  // min-width: 120px
-  // padding: 5px 20px
-  position: absolute
-  // top: 2px
-  z-index: 100
-  // left: -27px
-  @include mediaPhone
-    display: flex
-    position: relative
-    top: 0
-    left: 0
-    background-color: transparent
-    z-index: 10
-    box-shadow: none
+// .language-dropdown
+//   background-color: $graphite
+//   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3)
+//   display: none
+//   right: 0
+//   // left: 0
+//   // min-width: 120px
+//   // padding: 5px 20px
+//   position: absolute
+//   // top: 2px
+//   z-index: 100
+//   // left: -27px
+//   @include mediaPhone
+//     display: flex
+//     position: relative
+//     top: 0
+//     left: 0
+//     background-color: transparent
+//     z-index: 10
+//     box-shadow: none
 
-.language-dropdown a
-  color: $white
-  display: block
-  font-size: 14px
-  line-height: 1.5em
-  padding: 10px
-  text-transform: capitalize
-  @include mediaPhone
-    padding: 6px 0
-    font-size: 16px
-    color: $white
+// .language-dropdown a
+//   color: $white
+//   display: block
+//   font-size: 14px
+//   line-height: 1.5em
+//   padding: 10px
+//   text-transform: capitalize
+//   @include mediaPhone
+//     padding: 6px 0
+//     font-size: 16px
+//     color: $white
 
-@media ( min-width: 768px  )
-  .language-menu > ul > li:hover .language-dropdown
-    display: block
+// @media ( min-width: 768px  )
+//   .language-menu > ul > li:hover .language-dropdown
+//     display: block
 
-  .language-dropdown a
-    // display: block
-    padding: 8px 25px !important
-    cursor: pointer
-  .language-dropdown li:hover
-    background-color: $graphite
-  .language-dropdown li:hover a
-    color: $white !important
+//   .language-dropdown a
+//     // display: block
+//     padding: 8px 25px !important
+//     cursor: pointer
+//   .language-dropdown li:hover
+//     background-color: $graphite
+//   .language-dropdown li:hover a
+//     color: $white !important

@@ -11,7 +11,7 @@
     justify-content: flex-end
     height: var(--height)
     flex-direction: column
-    padding-bottom: 78px
+    padding-bottom: 50px
     z-index: 1
     @include mediaTablet
       position: absolute
@@ -53,14 +53,11 @@
     border: none
     display: block
     @include mediaTablet
-      position: absolute !important
-      right: 0
-      top: 50%
-      transform: translateY(-50%)
-      // min-width: 100%
-      // height: auto !important
-      width: auto !important
-
+      // position: absolute !important
+      // right: 0
+      // top: 50%
+      // transform: translateY(-50%)
+      // width: auto !important
 
   &__head
     text-transform: uppercase
@@ -69,6 +66,7 @@
     color: $white
     display: flex
     justify-content: center
+    margin-bottom: 10px
     @include mediaTablet
       text-align: center
     @include mediaPhone

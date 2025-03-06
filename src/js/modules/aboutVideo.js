@@ -26,52 +26,56 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Play/Pause button click
-  playPauseButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    if (video.paused) {
-      playVideo();
-    } else {
-      pauseVideo();
-    }
-  });
-
-  // Video click for play/pause
-  video.addEventListener("click", () => {
-    if (video.paused) {
-      playVideo();
-    } else {
-      pauseVideo();
-    }
-  });
-
-  // Show button and background when video ends
-  video.addEventListener("ended", () => {
-    videoBackground.style.opacity = "1";
-    if (isMobile()) {
-      playPauseButton.style.opacity = "1"; // Показываем кнопку только на мобильных
-      playPauseButton.style.pointerEvents = "auto";
-    }
-  });
-
-  // Ensure correct button visibility on resize
-  const updateButtonVisibility = () => {
-    if (!isMobile()) {
-      // На экранах >= 768px кнопка всегда видима
-      playPauseButton.style.opacity = "1";
-      playPauseButton.style.pointerEvents = "auto";
-    } else {
-      // На экранах < 768px кнопка управляется логикой play/pause
+  if (video) {
+    playPauseButton.addEventListener("click", (event) => {
+      event.preventDefault();
       if (video.paused) {
-        playPauseButton.style.opacity = "1";
-        playPauseButton.style.pointerEvents = "auto";
+        playVideo();
       } else {
-        playPauseButton.style.opacity = "0";
-        playPauseButton.style.pointerEvents = "none";
+        pauseVideo();
       }
-    }
-  };
+    });
+  
+    // Video click for play/pause
+    video.addEventListener("click", () => {
+      if (video.paused) {
+        playVideo();
+      } else {
+        pauseVideo();
+      }
+    });
 
-  // Run on load and resize
-  window.addEventListener("resize", updateButtonVisibility);
-  updateButtonVisibility();
+    // Show button and background when video ends
+    video.addEventListener("ended", () => {
+        videoBackground.style.opacity = "1";
+        if (isMobile()) {
+          playPauseButton.style.opacity = "1"; // Показываем кнопку только на мобильных
+          playPauseButton.style.pointerEvents = "auto";
+        }
+    });
+
+    // Ensure correct button visibility on resize
+    const updateButtonVisibility = () => {
+      if (playPauseButton) {
+        if (!isMobile()) {
+          // На экранах >= 768px кнопка всегда видима
+          playPauseButton.style.opacity = "1";
+          playPauseButton.style.pointerEvents = "auto";
+        } else {
+          // На экранах < 768px кнопка управляется логикой play/pause
+          if (video.paused) {
+            playPauseButton.style.opacity = "1";
+            playPauseButton.style.pointerEvents = "auto";
+          } else {
+            playPauseButton.style.opacity = "0";
+            playPauseButton.style.pointerEvents = "none";
+          }
+        }
+      }  
+    };
+
+    // Run on load and resize
+    window.addEventListener("resize", updateButtonVisibility);
+    updateButtonVisibility();
+  }  
 });
