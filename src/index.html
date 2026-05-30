@@ -2,7 +2,7 @@
 <html lang="ru" class="page">
 @include('html/head.html', { "title":"Sombrio - Home" })
 
-<body class="page__body">
+<body class="page__body" style="--btn-call-color: #554433">
   <div class="wrapper">
     @include('html/header.html')
 
@@ -20,6 +20,8 @@
     @include('html/footer.html')
     @include('html/index/modal.html')
   </div><!-- /.wrapper -->
+  @include('html/index/call-btn.html')
+
 </body>
 
 </html>

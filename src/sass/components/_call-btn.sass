@@ -1,0 +1,100 @@
+.call-btn
+  position: fixed
+  bottom: 25px
+  right: 25px
+  width: 54px
+  height: 54px
+  background-color: var(--btn-call-color, #4d8399)
+  color: #000
+  border-radius: 50%
+  padding: 5px
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 999
+  filter: drop-shadow(1px 2px 5px rgba(51, 65, 78, 0.5))
+  animation: myAnim 2.5s ease 0.5s infinite normal none
+  @include mediaPhoneSm
+    animation: none
+    width: 100%
+    bottom: 0
+    right: 0
+    left: 0
+    border-radius: 0
+    padding: 10px
+    justify-content: space-evenly
+    height: calc(78px + env(safe-area-inset-bottom))
+    background-color: #fff
+    gap: 15px
+    box-shadow: 0 -7px 9px -7px rgba(0, 0, 0, 0.3)
+    padding-bottom: env(safe-area-inset-bottom)
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 65px
+    height: 65px
+    border: 1px solid rgba(247, 247, 247, 0.85)
+    transform: translateX(-50%) translateY(-50%)
+    border-radius: 50%
+    animation: myAnimBef 2.5s ease 0.5s infinite normal none
+    pointer-events: none
+  &::after
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 80px
+    height: 80px
+    border: 1px solid rgba(247, 247, 247, 0.85)
+    transform: translateX(-50%) translateY(-50%)
+    border-radius: 50%
+    animation: myAnimBef 3.5s ease 0.7s infinite normal none
+    pointer-events: none
+  img
+    width: 28px
+    height: 28px
+  &--viber
+    display: none
+    width: 0
+    height: 0
+    @include mediaPhoneSm
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      gap: 3px
+      width: auto
+      height: 28px
+      flex-basis: 32%
+      font-size: 15px
+      color: #8e24aa
+  &--whatsapp
+    display: none
+    width: 0
+    height: 0
+    @include mediaPhoneSm
+      display: flex
+      flex-direction: column
+      justify-content: center
+      color: red
+      align-items: center
+      gap: 3px
+      width: auto
+      height: 28px
+      flex-basis: 32%
+      color: #3caf44
+      font-size: 15px
+  &--phone
+    @include mediaPhoneSm
+      background-color: var(--btn-call-color, #4d8399)
+      height: 50px
+      width: 50px
+      padding: 7px
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      animation: myAnimRot 2s ease 1s infinite forwards
+      flex-shrink: 0
