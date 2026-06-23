@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta name="theme-color" content="#111111">
   <!-- подключение стилей -->
-  <link rel="stylesheet" href="css/style.min.css?ver=05300032">
+  <link rel="stylesheet" href="css/style.min.css?ver=06232204">
   <!-- подключение скриптов -->
-  <script defer src="js/main.min.js?ver=05300032"></script>
+  <script defer src="js/main.min.js?ver=06232204"></script>
   <!-- подключение favicon -->
   <link rel="icon" href="images/favicon/favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -16,12 +16,12 @@
   <title>Sombrio - Home</title>
 </head>
 
-<body class="page__body" style="--btn-call-color: #554433">
+<body class="page__body" style="--btn-call-color: #FFBA21">
   <div class="wrapper">
     <header class="header">
   <div class="header__container">
     <div class="header__logo logo">
-      <img src="images/logo.svg" width="82" height="60" alt="Logo">
+      <img src="images/logo.png" width="88" height="53" alt="Logo">
     </div>
 
     <div class="header__menu menu">
@@ -41,9 +41,12 @@
     </div><!-- /.menu -->
 
     <ul class="top__social social" data-da=".menu__body,767.98,2">
-      <li class="social__item top__social--tel">
+      <li class="social__item social__item--tel" data-da=".header__container,767.98,2">
         <a href="tel:+37322203102" class="social__icon" target="_blank">
-          +373 22 20 31 02
+          <svg class="icon-svg phone" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <use xlink:href="images/icons/sprite.svg#phone"></use>
+          </svg>
+          <span>076 776 100</span>
         </a>
       </li>
       <li class="social__item">
@@ -105,9 +108,35 @@
       </video>
     </div>
     <div class="top__container">
-      <h1 class="top__head">Жалюзи, для уюта в вашем доме</h1>
-      <div class="top__text">Gasiti mai ieftin - noi reducem pretul!</div>
-      <button class="btn-reset btn btn-call top__btn openModalBtn">Связаться</button>
+      <div class="top__cover">
+        <h1 class="top__head">ЖАЛЮЗИ И ШТОРЫ</h1>
+        <div class="top__subhead">НА ЗАКАЗ В КИШИНЕВЕ</div>
+        <div class="top__text">ДЛЯ ВАШЕГО КОМФОРТА И УЮТА В ДОМЕ</div>
+        <div class="top__list">
+          <div class="top__item">
+            <div class="top__img">
+              <img src="images/icons/zamer.svg" width="32" height="32" alt="icon">
+            </div>
+            Бесплатный замер
+          </div>
+          <div class="top__item">
+            <div class="top__img">
+              <img src="images/icons/setting.svg" width="32" height="32" alt="icon">
+            </div>
+            Собственное производство
+          </div>
+          <div class="top__item">
+            <div class="top__img">
+              <img src="images/icons/warranty.svg" width="32" height="32" alt="icon">
+            </div>
+            Гарантия до трех лет
+          </div>
+        </div>
+        <div class="top__btns">
+          <button class="btn-reset btn btn-call top__btn--get openModalBtn">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+          <a href="#stock" class="btn-reset btn btn-call top__btn--works">СМОТРЕТЬ НАШИ РАБОТЫ</a>
+        </div>
+      </div>
     </div>
 
   </div><!-- /.top__container -->

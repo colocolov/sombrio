@@ -1,6 +1,6 @@
 .menu
   --height-span: 22px
-  --width-span: 30px
+  --width-span: 38px
   --weight-span: 2px
   // margin-left: 50px
   &__body
@@ -256,9 +256,16 @@
       &:first-child
         top: 0
         transition: transform .3s ease-in-out, top .3s ease-in-out, background-color .5s ease-out
+      &:nth-child(2)
+        width: 19px
+        left: auto
+        right: 0
       &:last-child
         top: auto
+        width: 28px
         bottom: 0
+        right: 0
+        left: auto
         transition: transform .3s ease-in-out, top .3s ease-in-out, background-color .5s ease-out
     &._active
       span
@@ -272,6 +279,7 @@
         &:last-child
           top: calc( 50% - 2px )
           transform: rotate(45deg)
+          width: 38px
           transition: transform .3s ease-in-out, top .3s ease-in-out
 
   &-languages
